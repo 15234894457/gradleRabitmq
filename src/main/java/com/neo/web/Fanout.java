@@ -27,10 +27,18 @@ public class Fanout {
 	@RequestMapping(value="/findAllContract",method=RequestMethod.GET)
 	@ResponseBody
 	@ApiOperation(value = "查询",notes="查询")
-	public String findAllContract(){	
+	public String findAllContract(HttpServletRequest request,String a){	
 		sender.send();
-		return "1";
+
+	
+		String string = new StringBuilder().append(request.getRequestURL()).append(request.getQueryString() == null ? "" : "?" + request.getQueryString()).toString();
+		
+		String token = request.getSession().getId();
+
+
+		return "1"+"+++++++++++++++"+string+"+++++++++++++++"+token;
 	}
+
 	
 
 }
