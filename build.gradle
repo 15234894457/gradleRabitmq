@@ -7,7 +7,10 @@ buildscript {
 		springBootVersion = '1.5.4.RELEASE'
 	}
 	repositories {
-		mavenCentral()
+		maven {
+			name 'open'
+			url "http://artifactory.open.com.cn/artifactory/maven/"
+		}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -19,7 +22,10 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 repositories {
-	mavenCentral()
+	maven {
+		name 'open'
+		url "http://artifactory.open.com.cn/artifactory/maven/"
+	}
 }
 dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter', version:'1.5.4.RELEASE') {
