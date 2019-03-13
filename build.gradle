@@ -31,6 +31,7 @@ dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter', version:'1.5.4.RELEASE') {
 exclude(module: 'commons-logging')
     }
+    compile files('lib/ojdbc-14.jar')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.4.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version:'1.5.4.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version:'1.5.4.RELEASE'
