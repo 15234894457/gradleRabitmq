@@ -1,4 +1,4 @@
-//package com.neo;
+package com.neo;
 //
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
@@ -15,7 +15,7 @@
 //	}
 //
 //}
-/*import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 import org.junit.Assert;
@@ -51,11 +51,6 @@ public class EnvironmentTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
-    /**
-     * 业务数据接口
-     */
-	@Autowired
-	//private SupplierService supplierService;
 
     /**
      * 所有测试方法执行之前执行该方法
@@ -72,7 +67,7 @@ public class EnvironmentTest {
      */
     @Test
     public void testQueryUniversityByStudyType(){
-        String url = String.format("/userresou/findResou");
+        String url = String.format("/Many/oneToMany");
         MvcResult result = null;
 		try {
 			result = mockMvc.perform(get(url).accept(MediaType.APPLICATION_JSON))
@@ -84,4 +79,4 @@ public class EnvironmentTest {
 		}
         Assert.assertEquals(200, result.getResponse().getStatus());
     }
-}*/
+}
